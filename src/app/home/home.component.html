@@ -1,5 +1,26 @@
-<div class="container">
-  <h1 class="title">
-    {{ 'PAGES.HOME.TITLE' | translate }}
-  </h1>
-</div>
+<!--<div class="board">
+  <div class="row">
+    <div class="column score">{{ white.score }}</div>
+    <div class="column score">{{ green.score }}</div>
+  </div>
+  <div class="row">
+    <div class="column punition">{{ white.punitions }}</div>
+    <div class="column advantage">{{ white.advantages }}</div>
+    <div class="column punition">{{ green.punitions }}</div>
+    <div class="column advantage">{{ green.advantages }}</div>
+  </div>
+</div>-->
+<input type="button" value="Full Screen" (click)="fullScreen()" />
+
+<table>
+  <tr class="scores">
+    <td id="whiteScore" colspan="2" [ngClass]="['score', 'white', getClass('whiteScore')]" (click)="handleClick($event)">5</td>
+    <td id="greenScore" colspan="2" class="score green" (click)="handleClick($event)">3</td>
+  </tr>
+  <tr class="puni-advan">
+    <td id="whitePunition" class="punition" (click)="handleClick($event)">1</td>
+    <td id="whiteAdvantage" class="advantage" (click)="handleClick($event)">2</td>
+    <td id="greenPunition" class="punition" (click)="handleClick($event)">3</td>
+    <td id="greenAdvantage" class="advantage" (click)="handleClick($event)">4</td>
+  </tr>
+</table>
